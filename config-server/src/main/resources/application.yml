@@ -1,0 +1,38 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/Ecopigpig/springcloudConfig1
+#          uri: https://github.com/how2j/springcloudConfig
+          searchPaths: respo
+          skipSslValidation: true
+      profile: dev
+      name: config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8030
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+
+  endpoint:
+    health:
+      show-details: always
+  health:
+    status:
+      http-mapping:
+        FATAL: 503
