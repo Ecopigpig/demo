@@ -1,11 +1,11 @@
-package com.example.hystrixdashboard;
+package com.example.zuul;
 
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HystrixDashboardApplicationTests {
+class ZuulApplicationTests {
 
     @Test
     void contextLoads() {

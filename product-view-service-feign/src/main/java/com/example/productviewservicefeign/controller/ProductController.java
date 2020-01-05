@@ -4,16 +4,17 @@ import com.example.productviewservicefeign.pojo.Product;
 import com.example.productviewservicefeign.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @Configuration
-@RestController
+@Controller
+@RefreshScope
 public class ProductController {
 
     @Autowired

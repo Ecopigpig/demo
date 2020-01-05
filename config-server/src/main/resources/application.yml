@@ -29,10 +29,6 @@ management:
         allowed-origins: "*"
         allowed-methods: "*"
 
-  endpoint:
-    health:
-      show-details: always
-  health:
-    status:
-      http-mapping:
-        FATAL: 503
+hystrix:
+  metrics:
+    enabled: true

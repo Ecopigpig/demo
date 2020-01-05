@@ -17,4 +17,19 @@ spring:
     servlet:
       content-type: text/html
 
+ribbon:
+  eager-load:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+hystrix:
+  metrics:
+    enabled: true
 
